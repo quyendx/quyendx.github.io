@@ -6,11 +6,11 @@
 </head>
 <body>
     <script type="text/javascript">
-        var code = document.location.search.substr(1);
+        var username = document.location.search.substr(1);
         document.location.replace(
-        	if ("standalone" in window.navigator) {
-        		'krcobotalks://code' + code
-        	};
+            "standalone" in window.navigator ?
+            'krcobotalks://'+username :              // iOS
+            'http://twitter.com/'+username);    // others
     </script>
 </body>
 </html>
